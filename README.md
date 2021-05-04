@@ -1,7 +1,7 @@
 # Análise de Sentimentos sobre a pandemia de COVID-19 a partir do Twitter
 Este repositório tem como finalidade:
 * Criar um dataset para treinamento de modelos de aprendizado de máquina sobre as 5 emoções de Ekman.
-* Analisar os sentimentos predominantes em determinados períodos da pandemia
+* Analisar os sentimentos predominantes durante os primeiros 12 meses da pandemia de COVID-19.
 
 ## Sobre o dataset de treinamento
 O dataset é composto por tweets que contenham 
@@ -28,8 +28,8 @@ março de 2021. Os tweets foram selecionados de acordo com a presença das palav
 
 ## Sobre o teste do modelo
 O modelo de classificação foi feito a partir da implementação do classificador
-linear LinearSVC, disponível atrabés do scikit-learn. Esse modelo foi treinado
-a partir do dataset tweets_ekman e sseu desempenho foi medido através de uma
+linear LinearSVC, disponível através do scikit-learn. Esse modelo foi treinado
+a partir do dataset tweets_ekman e seu desempenho foi medido através de uma
 matriz de erro (ou matriz de confusão), a partir da qual obtivemos os seguintes
 valores:
 
@@ -38,14 +38,6 @@ valores:
 As demais medidas de precisão, recall e f-score:
 
 ![Relatório de Classificação](fig/relatorio_classificacao.png)
-
-As medidas indicam que devemos revisar o conjunto de treinamento gerado a partir
-dos pares tweets e hashtags, já que o modelo está mostrando medidas satisfatórias
-para os dados importados do dataset do blog Minerando Dados, mas não para os
-dados provenentes do dataset que criamos. Um bom ponto de partida é reler o artigo
-de (Niko e Demšar, 2018), para ver como foi feito o tratamento dos tweets no
-trabalho deles, analisar se é aplicável ao nosso contexto e, caso positivo, tentar
-reproduzir.
 
 ## Referências
 Karami, Amir, et al. "Twitter and research: a systematic
