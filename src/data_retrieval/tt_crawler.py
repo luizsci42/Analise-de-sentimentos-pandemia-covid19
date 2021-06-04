@@ -62,7 +62,7 @@ class ConsultorTwitter:
         :return:
         """
         df_tweets = pd.DataFrame(dados, columns=['Texto', 'Data'])
-        path = 'datasets/'
+        path = '../../resources/datasets/'
         df_tweets.to_csv(path_or_buf=path + nome_arquivo, mode='w')
 
         return df_tweets

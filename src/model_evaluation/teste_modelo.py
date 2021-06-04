@@ -9,7 +9,7 @@ from sklearn.metrics import classification_report
 
 
 def carregar_modelo():
-    path = 'modelos/modelo_classificacao_svc'
+    path = '../../resources/modelos/modelo_classificacao_svc'
     try:
         modelo = pickle.load(open(path, 'rb'))
         print('Modelo carregado com sucesso!\n')
@@ -46,13 +46,13 @@ def testar_performance(df_teste: pd.DataFrame, df_previsoes: pd.DataFrame, exibi
         plt.show()
 
 
-def fazer_previsoes(dataset_alvo: pd.DataFrame, saida_previsoes: str):
+def fazer_previsoes(alvo: pd.DataFrame, saida_previsoes: str):
     nlp = spacy.load('pt_core_news_lg')
     # textos = ['tô feliz hoje', 'não estou com paciência nenhuma pra nada',
     #          'deveras interessante', 'as coisas são assim mesmo', 'nada me é incômodo hoje',
     #          'sei lá do cabrunco', 'três pratos de tigres', 'sai viado']
 
-    df_tweets = dataset_alvo
+    df_tweets = alvo
     textos = list(df_tweets['Texto'])
     modelo = carregar_modelo()
     sentimentos = []
@@ -80,9 +80,9 @@ def fazer_previsoes(dataset_alvo: pd.DataFrame, saida_previsoes: str):
 
 
 if __name__ == '__main__':
-    dataset_alvo = pd.read_csv('datasets/amostra_dataset.csv')
-    path_prvisoes = 'datasets/teste_previsoes.csv'
-    fazer_previsoes(dataset_alvo, path_prvisoes)
+    dataset_alvo = pd.read_csv('../../resources/datasets/amostra_dataset.csv')
+    path_previsoes = '../../resources/datasets/teste_previsoes.csv'
+    fazer_previsoes(dataset_alvo, path_previsoes)
 
-    dataset_previsoes = pd.read_csv('datasets/teste_previsoes.csv')
+    dataset_previsoes = pd.read_csv('../../resources/datasets/teste_previsoes.csv')
     testar_performance(dataset_alvo, dataset_previsoes, True)
