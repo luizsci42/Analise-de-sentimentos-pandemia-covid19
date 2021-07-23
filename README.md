@@ -39,6 +39,14 @@ As demais medidas de precisão, recall e f-score:
 
 ![Relatório de Classificação](resources/fig/relatorio_classificacao.png)
 
+## Resultado
+A partir o modelo treinado, classificamos os tweets do dataset alvo nas 5 emoções de Ekamn +
+o sentimento Neutro. A neutralidade foi considerada para filtrar tweets que poderiam ser
+informativos, como postagens de jornais. Como esperado, podemos notar uma grande predominância
+de sentimentos negativos, principalmente raiva, medo e tristeza.
+
+![Emoções de Ekman Previstas](resources/fig/sentimentos_ekman_previstos.png)
+
 ## Referências
 Karami, Amir, et al. "Twitter and research: a systematic
 literature review through text mining." IEEE Access 8 (2020):
