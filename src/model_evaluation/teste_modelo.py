@@ -9,7 +9,7 @@ from sklearn.metrics import classification_report
 
 
 def carregar_modelo():
-    path = '../../resources/modelos/modelo_classificacao_svc'
+    path = 'resources/modelos/modelo_classificacao_svc'
     try:
         modelo = pickle.load(open(path, 'rb'))
         print('Modelo carregado com sucesso!\n')
