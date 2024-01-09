@@ -47,6 +47,10 @@ de sentimentos negativos, principalmente raiva, medo e tristeza.
 
 ![Emoções de Ekman Previstas](resources/fig/sentimentos_ekman_previstos.png)
 
+É possível ver ainda a variaçã de emoções ao longo dos primeiros 12 meses de pandemia. Pode-se notar
+uma predominância de sentimentos negativos como medo, tristeza e raiva.
+![Variação de emoções ao longo do primeiro ano de pandemia](resources/fig/variacao_sentimentos.png)
+
 ## Referências
 Karami, Amir, et al. "Twitter and research: a systematic
 literature review through text mining." IEEE Access 8 (2020):

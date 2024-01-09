@@ -6,3 +6,5 @@ __pycache__/
 /resources/config
 /resources/modelos
 /resources/datasets
+/tweets_venv
+/resources/*
